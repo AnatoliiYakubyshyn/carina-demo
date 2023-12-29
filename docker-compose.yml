@@ -6,4 +6,4 @@ services:
     volumes:
       - ./target:/target
 volumes:
-  app-code:
+  target:
