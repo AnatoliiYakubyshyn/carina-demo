@@ -11,4 +11,4 @@ ENV PATH="${MAVEN_HOME}/bin:${PATH}"
 
 RUN mvn -version
 
-CMD mvn clean test -Dsuite=api
+CMD mvn test -Dsuite=api

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  test:
+    image: apitest
+    container_name: test_api
+    volumes:
+      - ./target:/target
+volumes:
+  app-code:
