@@ -15,6 +15,7 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.zebrunner.carina.demo.gui.components.ModelItem;
@@ -22,6 +23,7 @@ import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -100,7 +102,16 @@ public class WebSampleTest implements IAbstractTest {
     @MethodOwner(owner = "qpsdemo")
     @TestLabel(name = "feature", value = { "web", "acceptance" })
     public void testNewsSearch() {
-        HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
+        ChromeOptions options = new ChromeOptions();
+
+        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            /* How to add test badge */
+
+            /* How to enable video recording */
+            put("enableVideo", true);
+            put("enableVNC",true);
+        }});
+        HomePageBase homePage = initPage(getDriver("chrome",options), HomePageBase.class);
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
 
