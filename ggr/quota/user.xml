@@ -1,0 +1,5 @@
+<browsers>
+    <browser name="chrome" version="100.0" count="5"/>
+    <!-- Additional browser configurations -->
+</browsers>
+

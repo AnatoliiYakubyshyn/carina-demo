@@ -1,0 +1,12 @@
+default:
+  users: "/etc/grid-router/users.htpasswd"
+  hub:
+    timeout: 60s
+    newSessionAttemptTimeout: 30s
+    capabilityMatcher: "browserName:chrome,version:100.0"
+  grid:
+    users: "/etc/grid-router/users.htpasswd"
+    sessionTimeout: 1800s
+  docker:
+    users: "/etc/grid-router/users.htpasswd"
+    host: "http://selenoid:4444/wd/hub"

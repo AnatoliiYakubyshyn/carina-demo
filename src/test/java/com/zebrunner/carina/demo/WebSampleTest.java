@@ -110,6 +110,8 @@ public class WebSampleTest implements IAbstractTest {
             /* How to enable video recording */
             put("enableVideo", true);
             put("enableVNC",true);
+            put("username","username");
+            put("password","password1234");
         }});
         HomePageBase homePage = initPage(getDriver("chrome",options), HomePageBase.class);
         homePage.open();

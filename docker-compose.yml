@@ -30,3 +30,15 @@ services:
     ports:
       - "8080:8080"
     command: [ "--selenoid-uri", "http://selenoid:4444" ]
+
+  ggr:
+    image: "aerokube/ggr"
+    container_name: ggr
+    links:
+      - selenoid
+    ports:
+      - "8085:4444"
+    volumes:
+      - "$PWD/ggr:/etc/grid-router"
+    networks:
+      - selenoid
