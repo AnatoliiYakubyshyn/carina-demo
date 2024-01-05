@@ -9,4 +9,7 @@ default:
     sessionTimeout: 1800s
   docker:
     users: "/etc/grid-router/users.htpasswd"
-    host: "http://selenoid:4444/wd/hub"
+    host: "http://localhost:4444/wd/hub"
+    capabilityMatcher: "browserName:chrome,version:100.0"
+    detectContainers: true
+  quota: "/etc/grid-router/quota/user.xml"

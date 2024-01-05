@@ -1,5 +1,9 @@
-<browsers>
-    <browser name="chrome" version="100.0" count="5"/>
-    <!-- Additional browser configurations -->
-</browsers>
-
+<qa:browsers xmlns:qa="urn:config.gridrouter.qatools.ru">
+    <browser name="chrome" defaultVersion="100.0" defaultPlatform="LINUX">
+        <version number="100.0">
+            <region name="asm2">
+                <host name="localhost" port="4445" count="1"/>
+            </region>
+        </version>
+    </browser>
+</qa:browsers>
