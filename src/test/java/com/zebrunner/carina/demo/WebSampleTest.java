@@ -102,18 +102,18 @@ public class WebSampleTest implements IAbstractTest {
     @MethodOwner(owner = "qpsdemo")
     @TestLabel(name = "feature", value = { "web", "acceptance" })
     public void testNewsSearch() {
-        ChromeOptions options = new ChromeOptions();
-
-        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
-            /* How to add test badge */
-
-            /* How to enable video recording */
-            put("enableVideo", true);
-            put("enableVNC",true);
-            put("username","username");
-            put("password","password1234");
-        }});
-        HomePageBase homePage = initPage(getDriver("chrome",options), HomePageBase.class);
+//        ChromeOptions options = new ChromeOptions();
+//
+//        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
+//            /* How to add test badge */
+//
+//            /* How to enable video recording */
+//            put("enableVideo", true);
+//            put("enableVNC",true);
+//            put("username","username");
+//            put("password","password1234");
+//        }});
+        HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
 
