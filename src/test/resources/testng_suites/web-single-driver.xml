@@ -5,6 +5,7 @@
 	<parameter name="jenkinsJobName" value="Web-Demo-Single-Driver-Test"/>
 	<parameter name="jenkinsJobType" value="web"/>
 	<parameter name="jenkinsEnvironments" value="DEMO"/>
+	<parameter name="provider" value="selenium"/>
 	<parameter name="jenkinsEmail" value="demo@zebrunner.com"/>
 
 	<parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
