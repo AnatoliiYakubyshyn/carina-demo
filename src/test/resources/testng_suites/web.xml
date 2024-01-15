@@ -8,7 +8,7 @@
 	<parameter name="jenkinsEmail" value="ayakubyshyn@solvd.com"/>
   
 	<parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
-	<parameter name="capabilities" value="provider:selenium"/>
+	<parameter name="provider" value="selenium"/>
 	<parameter name="jenkinsRegressionMatrix_full_regression" value="browser:chrome; browser:firefox"/>
 	<parameter name="jenkinsJobExecutionOrder" value="1"/>
 	<parameter name="jenkinsJobExecutionMode" value="continue"/>
