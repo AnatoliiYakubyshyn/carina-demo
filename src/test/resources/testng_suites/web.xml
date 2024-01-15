@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite verbose="1" name="Carina Demo Tests - Web Sample" parallel="methods">
 
-	<parameter name="suiteOwner" value="qpsdemo"/>
+	<parameter name="suiteOwner" value="anatolii"/>
 	<parameter name="jenkinsJobName" value="Web-Demo-Test"/>
 	<parameter name="jenkinsJobType" value="web"/>
 	<parameter name="jenkinsEnvironments" value="DEMO"/>
-	<parameter name="jenkinsEmail" value="demo@zebrunner.com"/>
+	<parameter name="jenkinsEmail" value="ayakubyshyn@solvd.com"/>
   
 	<parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
-
+	<parameter name="provider" value="selenium"/>
 	<parameter name="jenkinsRegressionMatrix_full_regression" value="browser:chrome; browser:firefox"/>
 	<parameter name="jenkinsJobExecutionOrder" value="1"/>
 	<parameter name="jenkinsJobExecutionMode" value="continue"/>

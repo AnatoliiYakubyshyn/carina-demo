@@ -1,0 +1,23 @@
+{
+  "chrome": {
+    "default": "100.0",
+    "versions": {
+      "100.0": {
+        "image": "sskorol/selenoid_chromium_vnc:100.0",
+        "port": "4444",
+        "enableVNC": true,
+        "enableVideo": true
+      }
+    }
+  },
+  "firefox": {
+    "default": "57.0",
+    "versions": {
+      "57.0": {
+        "image": "selenoid/firefox:88.0",
+        "port": "4444",
+        "path": "/wd/hub"
+      }
+    }
+  }
+}
