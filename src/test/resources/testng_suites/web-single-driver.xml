@@ -8,9 +8,10 @@
 	<parameter name="provider" value="selenium"/>
 	<parameter name="jenkinsEmail" value="demo@zebrunner.com"/>
 
-	<parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
+	<parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression, my_regression"/>
 
 	<parameter name="jenkinsRegressionMatrix_full_regression" value="browser:chrome;browser:firefox"/>
+	<parameter name="jenkinsRegressionMatrix_my_regression" value="browser:chrome;browser:firefox"/>
 	<parameter name="jenkinsJobExecutionOrder" value="2"/>
 	<parameter name="jenkinsJobExecutionMode" value="continue"/>
 	<parameter name="jenkinsAutoScreenshot" value="true"/>
