@@ -23,7 +23,5 @@ mvn clean eclipse:eclipse
 ### Run tests
 ```
 mvn clean test -Dsuite=api
-
-Changed readme to test webhook
 ```
 
