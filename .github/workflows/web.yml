@@ -1,11 +1,10 @@
+name: web
+
 on:
-  pull_request:
-    branches:
-      - main 
   workflow_dispatch:
-  
+
 jobs:
-  test-api:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +14,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-
-      - name: api test
-        run: mvn clean test -Dsuite=api   
-  
+      - name: Start Selenoid Server
+        uses: Xotabu4/selenoid-github-action@v2
+      - name: Build with Maven
+        run: mvn clean -Dsuite=web test
