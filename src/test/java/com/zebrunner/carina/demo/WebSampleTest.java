@@ -18,11 +18,15 @@ package com.zebrunner.carina.demo;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mongodb.MapReduceCommand;
+import com.zebrunner.agent.core.registrar.Artifact;
 import com.zebrunner.carina.demo.gui.components.ModelItem;
 import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -50,7 +54,7 @@ public class WebSampleTest implements IAbstractTest {
     @Test
     @MethodOwner(owner = "qpsdemo")
     @TestPriority(Priority.P3)
-    @TestLabel(name = "feature", value = { "web", "regression" })
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testModelSpecs() {
         // Open GSM Arena home page and verify page is opened
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
@@ -73,7 +77,7 @@ public class WebSampleTest implements IAbstractTest {
     @Test
     @MethodOwner(owner = "qpsdemo")
     @TestPriority(Priority.P1)
-    @TestLabel(name = "feature", value = { "web", "acceptance" })
+    @TestLabel(name = "feature", value = {"web", "acceptance"})
     public void testCompareModels() {
         // Open GSM Arena home page and verify page is opened
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
@@ -100,7 +104,7 @@ public class WebSampleTest implements IAbstractTest {
 
     @Test
     @MethodOwner(owner = "qpsdemo")
-    @TestLabel(name = "feature", value = { "web", "acceptance" })
+    @TestLabel(name = "feature", value = {"web", "acceptance"})
     public void testNewsSearch() {
 //        ChromeOptions options = new ChromeOptions();
 //
@@ -114,6 +118,8 @@ public class WebSampleTest implements IAbstractTest {
 //            put("password","password1234");
 //        }});
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
+        TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
+        Artifact.attachToTest("home screenshot", takesScreenshot.getScreenshotAs(OutputType.BYTES));
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
 
@@ -135,7 +141,7 @@ public class WebSampleTest implements IAbstractTest {
     @Test()
     @MethodOwner(owner = "qpsdemo")
     @TestPriority(Priority.P3)
-    @TestLabel(name = "feature", value = { "web", "regression" })
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testBrandGroup() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
