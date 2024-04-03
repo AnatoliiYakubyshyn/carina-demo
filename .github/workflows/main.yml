@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: api test
+        run: mvn clean test -Dsuite=api
