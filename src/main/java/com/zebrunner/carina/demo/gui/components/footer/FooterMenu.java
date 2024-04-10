@@ -15,7 +15,7 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo.gui.components.footer;
 
-import com.zebrunner.carina.demo.gui.pages.desktop.CompareModelsPage;
+import com.zebrunner.carina.demo.gui.pages.android.CompareModelsPage;
 import com.zebrunner.carina.demo.gui.pages.desktop.HomePage;
 import com.zebrunner.carina.demo.gui.pages.desktop.NewsPage;
 import org.openqa.selenium.SearchContext;
